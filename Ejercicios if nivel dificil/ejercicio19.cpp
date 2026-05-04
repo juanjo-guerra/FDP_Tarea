@@ -3,14 +3,14 @@ using namespace std;
 
 int main(){
 
-    float totalFinal, total2,cargos_electricos, tasasm= 3, consumo, comercializacion= 1.01, iva=1.13, precio1=0.185, cargo1=0.02, precio2=0.190, cargo2=0.04, precio3=0.188, cargo3=0.08, subsidio;
+    float totalFinal, total2,cargos_electricos, tasasm= 3, consumo, comercializacion= 1.01, iva=1.13, precio1=0.185, cargo1=0.02, precio2=0.190, cargo2=0.04, precio3=0.188, cargo3=0.08, subsidio=5.00;
 
     cout<< "-------Bienvenido, ingrese su consumo de energía----------"<<endl;
     cin>>consumo;
 
     if (consumo < 100)
     {
-        subsidio=5.00;
+        
         //Calculos 
         cargos_electricos= ((consumo * cargo1) + (consumo * precio1)+ comercializacion);
         total2= ((cargos_electricos - subsidio) * 1.13);

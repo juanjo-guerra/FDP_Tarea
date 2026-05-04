@@ -4,7 +4,7 @@ using namespace std;
 int main(){
 
     float billetera=100, cobro;
-    int edad, cant_ninos;
+    int edad;
 
     cout <<"Buenos días, por favor ingresa la edad de su hijo"<<endl;
     cin>>edad;

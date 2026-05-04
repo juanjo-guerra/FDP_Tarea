@@ -35,7 +35,7 @@ int main(){
     }
     else
     {
-        calificacion="conductor estandar";
+        cout<< "Valores no admitidos"<<endl;
     }
     
     cout<<"Estado del conductor: " <<calificacion<<endl;

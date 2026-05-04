@@ -4,7 +4,7 @@ using namespace std;
 int main(){
 
     float velocidad;
-    char continuar;
+    
 
     cout <<"Bienvenido, ingresa tu velocidad alcanzada por favor"<<endl;
     cin>> velocidad;
