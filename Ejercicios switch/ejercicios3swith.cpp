@@ -3,7 +3,6 @@ using namespace std;
 
 int main(){ 
 
-    int n=0;
     char c;
     cout <<"Hola podrias ingresa una letra"<<endl;
     cin>>c;
