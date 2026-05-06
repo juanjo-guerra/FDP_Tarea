@@ -18,7 +18,7 @@ int main(){
 
     switch (a,b,c)
     {
-    case a==b && b==c && a==c:
+    case:
         /* code * /
         break;
     
