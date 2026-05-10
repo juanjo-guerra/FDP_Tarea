@@ -5,43 +5,47 @@ using namespace std;
 int main(){
     SetConsoleOutputCP(CP_UTF8);
     SetConsoleCP(CP_UTF8);
-    
 
-    int salario;
+    float salario;
+    int rango;
 
-    cout<<"Bienvenido vamos a verificar cuanto te toca pagar de salario"<<endl;
-    cout<<"Ingresa tu salario"<<endl;
-    cin>>salario;
+    cout << "=== Calculadora de Impuestos ===" << endl;
+    cout << "Ingresa tu salario: $";
+    cin >> salario;
 
-    int rango= salario/1000;
+    // Convertir salario a rango
+    if (salario <= 0)        rango = -1;
+    else if (salario <= 472) rango = 0;
+    else if (salario <= 895) rango = 1;
+    else if (salario <= 2038) rango = 2;
+    else                     rango = 3;
 
-    switch (rango)
-    {
-    case 0:
-        if (salario >0 && salario <1000)
-        {
-            cout<<"tu descuento es del 0%"<<endl;
-        }
-        
-        break;
-    case 1:
-        if (salario >1000 && salario <2000)
-        {
-            cout<<"tu descuento es del 10%"<<endl;
-        }
-    case 2:
-    if (salario >2000)
-        {
-            cout<<"tu descuento es del 20%"<<endl;
-        }
-    
-    default:
-        if (salario <0)
-        {
-            cout <<"Monto de salario invalido"<<endl;
-        }
-        
+    switch (rango){
 
-        break;
+        case -1:
+            cout << "Salario invalido." << endl;
+            break;
+
+        case 0:
+            cout << "Tu rango paga 0% de impuesto." << endl;
+            cout << "Impuesto: $0.00" << endl;
+            break;
+
+        case 1:
+            cout << "Tu rango paga 10% de impuesto." << endl;
+            cout << "Impuesto: $" << (salario - 472) * 0.10 << endl;
+            break;
+
+        case 2:
+            cout << "Tu rango paga 20% de impuesto." << endl;
+            cout << "Impuesto: $" << 42.32 + (salario - 895) * 0.20 << endl;
+            break;
+
+        case 3:
+            cout << "Tu rango paga 30% de impuesto." << endl;
+            cout << "Impuesto: $" << 271.23 + (salario - 2038) * 0.30 << endl;
+            break;
     }
+
+    return 0;
 }
