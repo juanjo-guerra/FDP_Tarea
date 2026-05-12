@@ -2,22 +2,21 @@
 
 using namespace std;
 
-int main ()
+int main()
 {
-    int n, suma;
+    int n, suma = 0;
 
+    cout << "Ingresa tu numero" << endl;
+    cin >> n;
 
-    
-    cout<<"Ingresa tu numero";
-    while (n0)
+    while (n != 0)
     {
-        
-        
-        cin>>n;
-        
-    }
-    suma= n + suma;
-    
-    
 
+        suma = suma + n;
+        cin >> n;
+    }
+
+    cout << "La suma de sus numero es: " << suma << endl;
+
+    return 0;
 }
