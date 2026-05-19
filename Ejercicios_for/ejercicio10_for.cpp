@@ -8,18 +8,19 @@ using namespace std;
 int main()
 {
 
-    int n=0, siguiente;
-    
+    int n1 = 0, n2 = 1, siguiente, numero;
 
-    for (int i = 1; i <= n; siguiente= i +n)
+    cout << "Ingresa tu numero para realizar la seie Fibonacci" << endl;
+    cin >> numero;
+
+    for (int i = 0; n1 <= numero; i++)
     {
 
-        cout<<i<<endl;
-
-        
-        n= i;
-        i= siguiente;
-
-
+        cout << n1 << endl;
+        siguiente = n1 + n2;
+        n1 = n2;
+        n2 = siguiente;
     }
+
+    return 0;
 }
